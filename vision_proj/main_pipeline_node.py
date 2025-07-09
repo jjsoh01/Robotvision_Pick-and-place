@@ -2,65 +2,73 @@
 
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import String # 예시: 명령 메시지
-import time
+from geometry_msgs.msg import PointStamped
+from std_msgs.msg import Bool
 
 class MainPipelineNode(Node):
     def __init__(self):
         super().__init__('main_pipeline_node')
-        self.get_logger().info('MainPipelineNode started. Waiting for commands or initiating sequence.')
 
-        # (선택 사항) 특정 시퀀스 시작 또는 명령 구독
-        # self.command_subscriber = self.create_subscription(
-        #     String,
-        #     'pipeline/command',
-        #     self.command_callback,
-        #     10
-        # )
+        # 상태 플래그
+        self.busy = False
 
-        # 예시: 일정 시간 후 특정 로직 실행
-        self.timer = self.create_timer(5.0, self.initial_sequence_timer_callback)
-        self.sequence_started = False
+        # 3D 물체 위치 감지 토픽 구독
+        self.create_subscription(
+            PointStamped,
+            'object/position3d_robot_frame',
+            self.on_object_detected,
+            10
+        )
 
-    def initial_sequence_timer_callback(self):
-        if not self.sequence_started:
-            self.get_logger().info("Initiating initial robot movement or vision task after 5 seconds...")
-            # 여기에 초기 로봇 동작, 스캔 시작 등의 로직을 추가할 수 있습니다.
-            # 예를 들어, robot_control_node로 초기 자세 명령을 보내거나
-            # vision_pipeline의 특정 동작을 트리거할 수 있습니다.
+        # 그대로 robot_control_node 가 구독하는 동일 토픽에 퍼블리시
+        self.target_pub = self.create_publisher(
+            PointStamped,
+            'object/position3d_robot_frame',
+            10
+        )
 
-            # (예시) robot_control_node에 'home' 명령 발행 (robot_control_node가 해당 명령을 구독해야 함)
-            # cmd_msg = String()
-            # cmd_msg.data = "move_to_home_pose"
-            # self.command_publisher.publish(cmd_msg)
+        # 플레이스 완료 신호 구독 (robot_control_node 에서 퍼블리시한다고 가정)
+        self.create_subscription(
+            Bool,
+            'robot/place_done',
+            self.on_place_done,
+            10
+        )
 
-            self.sequence_started = True
-            # 한 번만 실행할 경우 타이머 비활성화
-            self.timer.cancel()
+        self.get_logger().info('MainPipelineNode ready.')
 
-    # def command_callback(self, msg):
-    #     self.get_logger().info(f"Received command: {msg.data}")
-    #     if msg.data == "start_grasp":
-    #         self.start_grasping_sequence()
-    #     elif msg.data == "reset":
-    #         self.reset_system()
+    def on_object_detected(self, msg: PointStamped):
+        """
+        감지된 3D 위치를 받으면,
+        - busy=False 일 때만 컨트롤러로 전달 → 픽&플레이스 트리거
+        - busy=True 면 무시
+        """
+        if not self.busy:
+            self.busy = True
+            self.get_logger().info(f'[PIPE] Trigger pick & place: '
+                                   f'x={msg.point.x:.3f}, y={msg.point.y:.3f}, z={msg.point.z:.3f}')
+            # 바로 같은 토픽으로 재발행 → robot_control_node 가 동작
+            self.target_pub.publish(msg)
+        else:
+            self.get_logger().debug('[PIPE] Busy, ignoring new detection.')
 
-    # def start_grasping_sequence(self):
-    #     self.get_logger().info("Starting grasping sequence...")
-    #     # 여기서는 robot_control_node에게 파지 동작을 지시하는 메시지를 발행할 수 있습니다.
-    #     # 또는 vision_nodes가 특정 방식으로 동작하도록 지시할 수 있습니다.
-    #     pass
-
-    # def reset_system(self):
-    #     self.get_logger().info("Resetting the system...")
-    #     pass
+    def on_place_done(self, msg: Bool):
+        """
+        픽&플레이스 완료 신호(Bool)를 받으면 busy=False 로 풀어줘서
+        다음 감지를 받을 수 있도록 허용
+        """
+        if msg.data:
+            self.busy = False
+            self.get_logger().info('[PIPE] Place done, ready for next object.')
 
 def main(args=None):
     rclpy.init(args=args)
-    main_pipeline_node = MainPipelineNode()
-    rclpy.spin(main_pipeline_node)
-    main_pipeline_node.destroy_node()
-    rclpy.shutdown()
+    node = MainPipelineNode()
+    try:
+        rclpy.spin(node)
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
 
 if __name__ == '__main__':
     main()

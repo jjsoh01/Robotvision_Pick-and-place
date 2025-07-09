@@ -1,16 +1,19 @@
 dynamixel_ids:
-  shoulder: 1
-  elbow: 2
-  wrist: 3
-  gripper: 4
+  base: 1
+  shoulder: 2
+  elbow: 3
+  wrist: 4
+  gripper: 5
 
 joint_limits:
-  shoulder: [-2.0, 2.0]
-  elbow: [-1.5, 1.5]
-  wrist: [-1.57, 1.57]
-  gripper: [0.0, 1.0]
+  base: [-2.5, 2.5]        # 약 -143° ~ +143°
+  shoulder: [-2.5, 2.5]
+  elbow: [-2.5, 2.5]
+  wrist: [-2.5, 2.5]
+  gripper: [0.0, 1.0]      # 그리퍼는 설계에 따라 조정
 
 initial_positions:
+  base: 0.0
   shoulder: 0.0
   elbow: 0.0
   wrist: 0.0

@@ -1,25 +1,30 @@
+
+image_width: 1280
+image_height: 720
+camera_name: "d435i_rgb"
 camera_matrix:
   rows: 3
   cols: 3
-  data: [615.0, 0.0, 320.0,
-         0.0, 615.0, 240.0,
-         0.0, 0.0, 1.0]
-
+  data: [920.685, 0, 649.094, 0, 920.685, 353.202, 0, 0, 1]
+distortion_model: plumb_bob
 distortion_coefficients:
   rows: 1
   cols: 5
-  data: [0.1, -0.05, 0.0, 0.0, 0.0]
+  data: [0, 0, 0, 0, 0]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [1, 0, 0, 0, 1, 0, 0, 0, 1]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [920.685, 0, 649.094, 0, 0, 920.685, 353.202, 0, 0, 0, 1, 0]
 
-image_width: 640
-image_height: 480
 
-# 카메라와 로봇 베이스 간 변환 행렬 (예: 4x4)
-camera_to_robot_transform:
+camera_to_robot_trans:
   rows: 4
   cols: 4
-  data: [
-    1.0, 0.0, 0.0, 0.0,
-    0.0, 1.0, 0.0, 0.0,
-    0.0, 0.0, 1.0, 0.3,
-    0.0, 0.0, 0.0, 1.0
-  ]
+  data: [1, 0, 0, 0.1,
+         0, 1, 0, 0.05,
+         0, 0, 1, 0.2,
+         0, 0, 0, 1]
