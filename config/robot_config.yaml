@@ -1,0 +1,21 @@
+dynamixel_ids:
+  shoulder: 1
+  elbow: 2
+  wrist: 3
+  gripper: 4
+
+joint_limits:
+  shoulder: [-2.0, 2.0]
+  elbow: [-1.5, 1.5]
+  wrist: [-1.57, 1.57]
+  gripper: [0.0, 1.0]
+
+initial_positions:
+  shoulder: 0.0
+  elbow: 0.0
+  wrist: 0.0
+  gripper: 0.0
+
+control_rate_hz: 20
+
+robot_base_frame: "base_link"
