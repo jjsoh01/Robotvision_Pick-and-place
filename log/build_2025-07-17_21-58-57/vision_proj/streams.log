@@ -1,0 +1,58 @@
+[0.619s] Invoking command in '/home/jjsoh/Robotvision_ws/build/vision_proj': PYTHONPATH=/home/jjsoh/Robotvision_ws/build/vision_proj/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/jjsoh/Robotvision_ws/build/vision_proj/build
+[0.824s] running develop
+[0.967s] Removing /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision-proj.egg-link (link to .)
+[1.002s] Invoked command in '/home/jjsoh/Robotvision_ws/build/vision_proj' returned '0': PYTHONPATH=/home/jjsoh/Robotvision_ws/build/vision_proj/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/jjsoh/Robotvision_ws/build/vision_proj/build
+[1.003s] Invoking command in '/home/jjsoh/Robotvision_ws/src/vision_proj': PYTHONPATH=/home/jjsoh/Robotvision_ws/build/vision_proj/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vision_proj build --build-base /home/jjsoh/Robotvision_ws/build/vision_proj/build install --record /home/jjsoh/Robotvision_ws/build/vision_proj/install.log --single-version-externally-managed install_data --force
+[1.193s] running egg_info
+[1.194s] writing ../../build/vision_proj/vision_proj.egg-info/PKG-INFO
+[1.194s] writing dependency_links to ../../build/vision_proj/vision_proj.egg-info/dependency_links.txt
+[1.194s] writing entry points to ../../build/vision_proj/vision_proj.egg-info/entry_points.txt
+[1.194s] writing requirements to ../../build/vision_proj/vision_proj.egg-info/requires.txt
+[1.194s] writing top-level names to ../../build/vision_proj/vision_proj.egg-info/top_level.txt
+[1.197s] reading manifest file '../../build/vision_proj/vision_proj.egg-info/SOURCES.txt'
+[1.203s] adding license file 'LICENSE'
+[1.204s] writing manifest file '../../build/vision_proj/vision_proj.egg-info/SOURCES.txt'
+[1.204s] running build
+[1.204s] running build_py
+[1.204s] copying vision_proj/open_manipulator_x_kinematics.py -> /home/jjsoh/Robotvision_ws/build/vision_proj/build/lib/vision_proj
+[1.204s] copying vision_proj/dynamixel_utils.py -> /home/jjsoh/Robotvision_ws/build/vision_proj/build/lib/vision_proj
+[1.205s] running install
+[1.205s] running install_lib
+[1.206s] creating /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj
+[1.206s] copying /home/jjsoh/Robotvision_ws/build/vision_proj/build/lib/vision_proj/transform_utils.py -> /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj
+[1.206s] copying /home/jjsoh/Robotvision_ws/build/vision_proj/build/lib/vision_proj/main_pipeline_node.py -> /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj
+[1.207s] copying /home/jjsoh/Robotvision_ws/build/vision_proj/build/lib/vision_proj/camera_node.py -> /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj
+[1.207s] copying /home/jjsoh/Robotvision_ws/build/vision_proj/build/lib/vision_proj/open_manipulator_x_kinematics.py -> /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj
+[1.207s] copying /home/jjsoh/Robotvision_ws/build/vision_proj/build/lib/vision_proj/object_detection_node.py -> /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj
+[1.208s] copying /home/jjsoh/Robotvision_ws/build/vision_proj/build/lib/vision_proj/dynamixel_utils.py -> /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj
+[1.208s] copying /home/jjsoh/Robotvision_ws/build/vision_proj/build/lib/vision_proj/test.py -> /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj
+[1.208s] copying /home/jjsoh/Robotvision_ws/build/vision_proj/build/lib/vision_proj/__init__.py -> /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj
+[1.208s] copying /home/jjsoh/Robotvision_ws/build/vision_proj/build/lib/vision_proj/robot_control_node.py -> /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj
+[1.209s] copying /home/jjsoh/Robotvision_ws/build/vision_proj/build/lib/vision_proj/coordinate_publisher_node.py -> /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj
+[1.210s] byte-compiling /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj/transform_utils.py to transform_utils.cpython-310.pyc
+[1.211s] byte-compiling /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj/main_pipeline_node.py to main_pipeline_node.cpython-310.pyc
+[1.211s] byte-compiling /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj/camera_node.py to camera_node.cpython-310.pyc
+[1.212s] byte-compiling /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj/open_manipulator_x_kinematics.py to open_manipulator_x_kinematics.cpython-310.pyc
+[1.213s] byte-compiling /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj/object_detection_node.py to object_detection_node.cpython-310.pyc
+[1.213s] byte-compiling /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj/dynamixel_utils.py to dynamixel_utils.cpython-310.pyc
+[1.214s] byte-compiling /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj/test.py to test.cpython-310.pyc
+[1.214s] byte-compiling /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj/__init__.py to __init__.cpython-310.pyc
+[1.214s] byte-compiling /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj/robot_control_node.py to robot_control_node.cpython-310.pyc
+[1.215s] byte-compiling /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj/coordinate_publisher_node.py to coordinate_publisher_node.cpython-310.pyc
+[1.216s] running install_data
+[1.216s] copying package.xml -> /home/jjsoh/Robotvision_ws/install/vision_proj/share/vision_proj
+[1.216s] copying launch/vision_project.launch.py -> /home/jjsoh/Robotvision_ws/install/vision_proj/share/vision_proj/launch
+[1.216s] copying config/robot_config.yaml -> /home/jjsoh/Robotvision_ws/install/vision_proj/share/vision_proj/config
+[1.216s] copying config/camera_calib.yaml -> /home/jjsoh/Robotvision_ws/install/vision_proj/share/vision_proj/config
+[1.217s] copying models/yolov8n.pt -> /home/jjsoh/Robotvision_ws/install/vision_proj/share/vision_proj/models
+[1.234s] copying resource/vision_proj -> /home/jjsoh/Robotvision_ws/install/vision_proj/share/ament_index/resource_index/packages
+[1.234s] running install_egg_info
+[1.236s] Copying ../../build/vision_proj/vision_proj.egg-info to /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj-0.0.1-py3.10.egg-info
+[1.237s] running install_scripts
+[1.253s] Installing camera_node script to /home/jjsoh/Robotvision_ws/install/vision_proj/lib/vision_proj
+[1.254s] Installing coordinate_publisher_node script to /home/jjsoh/Robotvision_ws/install/vision_proj/lib/vision_proj
+[1.254s] Installing main_pipeline_node script to /home/jjsoh/Robotvision_ws/install/vision_proj/lib/vision_proj
+[1.254s] Installing object_detection_node script to /home/jjsoh/Robotvision_ws/install/vision_proj/lib/vision_proj
+[1.254s] Installing robot_control_node script to /home/jjsoh/Robotvision_ws/install/vision_proj/lib/vision_proj
+[1.254s] writing list of installed files to '/home/jjsoh/Robotvision_ws/build/vision_proj/install.log'
+[1.285s] Invoked command in '/home/jjsoh/Robotvision_ws/src/vision_proj' returned '0': PYTHONPATH=/home/jjsoh/Robotvision_ws/build/vision_proj/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vision_proj build --build-base /home/jjsoh/Robotvision_ws/build/vision_proj/build install --record /home/jjsoh/Robotvision_ws/build/vision_proj/install.log --single-version-externally-managed install_data --force

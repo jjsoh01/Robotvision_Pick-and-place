@@ -1,0 +1,1 @@
+/home/jjsoh/Robotvision_ws/build/open_manipulator_description/ament_cmake_environment_hooks/local_setup.sh

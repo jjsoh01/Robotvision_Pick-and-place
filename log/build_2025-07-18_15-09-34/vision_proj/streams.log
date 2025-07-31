@@ -1,0 +1,31 @@
+[0.530s] Invoking command in '/home/jjsoh/Robotvision_ws/src/vision_proj': PYTHONPATH=/home/jjsoh/Robotvision_ws/build/vision_proj/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vision_proj build --build-base /home/jjsoh/Robotvision_ws/build/vision_proj/build install --record /home/jjsoh/Robotvision_ws/build/vision_proj/install.log --single-version-externally-managed install_data
+[0.710s] running egg_info
+[0.710s] writing ../../build/vision_proj/vision_proj.egg-info/PKG-INFO
+[0.710s] writing dependency_links to ../../build/vision_proj/vision_proj.egg-info/dependency_links.txt
+[0.710s] writing entry points to ../../build/vision_proj/vision_proj.egg-info/entry_points.txt
+[0.711s] writing requirements to ../../build/vision_proj/vision_proj.egg-info/requires.txt
+[0.711s] writing top-level names to ../../build/vision_proj/vision_proj.egg-info/top_level.txt
+[0.712s] reading manifest file '../../build/vision_proj/vision_proj.egg-info/SOURCES.txt'
+[0.713s] adding license file 'LICENSE'
+[0.713s] writing manifest file '../../build/vision_proj/vision_proj.egg-info/SOURCES.txt'
+[0.714s] running build
+[0.714s] running build_py
+[0.714s] copying vision_proj/open_manipulator_x_kinematics.py -> /home/jjsoh/Robotvision_ws/build/vision_proj/build/lib/vision_proj
+[0.714s] running install
+[0.715s] running install_lib
+[0.716s] copying /home/jjsoh/Robotvision_ws/build/vision_proj/build/lib/vision_proj/open_manipulator_x_kinematics.py -> /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj
+[0.716s] byte-compiling /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj/open_manipulator_x_kinematics.py to open_manipulator_x_kinematics.cpython-310.pyc
+[0.718s] running install_data
+[0.718s] copying config/robot_config.yaml -> /home/jjsoh/Robotvision_ws/install/vision_proj/share/vision_proj/config
+[0.718s] copying config/camera_calib.yaml -> /home/jjsoh/Robotvision_ws/install/vision_proj/share/vision_proj/config
+[0.718s] running install_egg_info
+[0.720s] removing '/home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj-0.0.1-py3.10.egg-info' (and everything under it)
+[0.720s] Copying ../../build/vision_proj/vision_proj.egg-info to /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj-0.0.1-py3.10.egg-info
+[0.721s] running install_scripts
+[0.740s] Installing camera_node script to /home/jjsoh/Robotvision_ws/install/vision_proj/lib/vision_proj
+[0.741s] Installing coordinate_publisher_node script to /home/jjsoh/Robotvision_ws/install/vision_proj/lib/vision_proj
+[0.741s] Installing main_pipeline_node script to /home/jjsoh/Robotvision_ws/install/vision_proj/lib/vision_proj
+[0.741s] Installing object_detection_node script to /home/jjsoh/Robotvision_ws/install/vision_proj/lib/vision_proj
+[0.741s] Installing robot_control_node script to /home/jjsoh/Robotvision_ws/install/vision_proj/lib/vision_proj
+[0.741s] writing list of installed files to '/home/jjsoh/Robotvision_ws/build/vision_proj/install.log'
+[0.774s] Invoked command in '/home/jjsoh/Robotvision_ws/src/vision_proj' returned '0': PYTHONPATH=/home/jjsoh/Robotvision_ws/build/vision_proj/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vision_proj build --build-base /home/jjsoh/Robotvision_ws/build/vision_proj/build install --record /home/jjsoh/Robotvision_ws/build/vision_proj/install.log --single-version-externally-managed install_data

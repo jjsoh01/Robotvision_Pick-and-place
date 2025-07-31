@@ -1,0 +1,27 @@
+running egg_info
+writing ../../build/vision_proj/vision_proj.egg-info/PKG-INFO
+writing dependency_links to ../../build/vision_proj/vision_proj.egg-info/dependency_links.txt
+writing entry points to ../../build/vision_proj/vision_proj.egg-info/entry_points.txt
+writing requirements to ../../build/vision_proj/vision_proj.egg-info/requires.txt
+writing top-level names to ../../build/vision_proj/vision_proj.egg-info/top_level.txt
+reading manifest file '../../build/vision_proj/vision_proj.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/vision_proj/vision_proj.egg-info/SOURCES.txt'
+running build
+running build_py
+copying vision_proj/dynamixel_utils.py -> /home/jjsoh/Robotvision_ws/build/vision_proj/build/lib/vision_proj
+running install
+running install_lib
+copying /home/jjsoh/Robotvision_ws/build/vision_proj/build/lib/vision_proj/dynamixel_utils.py -> /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj
+byte-compiling /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj/dynamixel_utils.py to dynamixel_utils.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj-0.0.1-py3.10.egg-info' (and everything under it)
+Copying ../../build/vision_proj/vision_proj.egg-info to /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj-0.0.1-py3.10.egg-info
+running install_scripts
+Installing camera_node script to /home/jjsoh/Robotvision_ws/install/vision_proj/lib/vision_proj
+Installing coordinate_publisher_node script to /home/jjsoh/Robotvision_ws/install/vision_proj/lib/vision_proj
+Installing main_pipeline_node script to /home/jjsoh/Robotvision_ws/install/vision_proj/lib/vision_proj
+Installing object_detection_node script to /home/jjsoh/Robotvision_ws/install/vision_proj/lib/vision_proj
+Installing robot_control_node script to /home/jjsoh/Robotvision_ws/install/vision_proj/lib/vision_proj
+writing list of installed files to '/home/jjsoh/Robotvision_ws/build/vision_proj/install.log'

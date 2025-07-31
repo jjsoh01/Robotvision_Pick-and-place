@@ -1,0 +1,56 @@
+running develop
+Removing /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision-proj.egg-link (link to .)
+running egg_info
+writing ../../build/vision_proj/vision_proj.egg-info/PKG-INFO
+writing dependency_links to ../../build/vision_proj/vision_proj.egg-info/dependency_links.txt
+writing entry points to ../../build/vision_proj/vision_proj.egg-info/entry_points.txt
+writing requirements to ../../build/vision_proj/vision_proj.egg-info/requires.txt
+writing top-level names to ../../build/vision_proj/vision_proj.egg-info/top_level.txt
+reading manifest file '../../build/vision_proj/vision_proj.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/vision_proj/vision_proj.egg-info/SOURCES.txt'
+running build
+running build_py
+copying vision_proj/open_manipulator_x_kinematics.py -> /home/jjsoh/Robotvision_ws/build/vision_proj/build/lib/vision_proj
+copying vision_proj/object_detection_node.py -> /home/jjsoh/Robotvision_ws/build/vision_proj/build/lib/vision_proj
+copying vision_proj/robot_control_node.py -> /home/jjsoh/Robotvision_ws/build/vision_proj/build/lib/vision_proj
+copying vision_proj/coordinate_publisher_node.py -> /home/jjsoh/Robotvision_ws/build/vision_proj/build/lib/vision_proj
+running install
+running install_lib
+creating /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj
+copying /home/jjsoh/Robotvision_ws/build/vision_proj/build/lib/vision_proj/transform_utils.py -> /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj
+copying /home/jjsoh/Robotvision_ws/build/vision_proj/build/lib/vision_proj/main_pipeline_node.py -> /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj
+copying /home/jjsoh/Robotvision_ws/build/vision_proj/build/lib/vision_proj/camera_node.py -> /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj
+copying /home/jjsoh/Robotvision_ws/build/vision_proj/build/lib/vision_proj/open_manipulator_x_kinematics.py -> /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj
+copying /home/jjsoh/Robotvision_ws/build/vision_proj/build/lib/vision_proj/object_detection_node.py -> /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj
+copying /home/jjsoh/Robotvision_ws/build/vision_proj/build/lib/vision_proj/dynamixel_utils.py -> /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj
+copying /home/jjsoh/Robotvision_ws/build/vision_proj/build/lib/vision_proj/test.py -> /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj
+copying /home/jjsoh/Robotvision_ws/build/vision_proj/build/lib/vision_proj/__init__.py -> /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj
+copying /home/jjsoh/Robotvision_ws/build/vision_proj/build/lib/vision_proj/robot_control_node.py -> /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj
+copying /home/jjsoh/Robotvision_ws/build/vision_proj/build/lib/vision_proj/coordinate_publisher_node.py -> /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj
+byte-compiling /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj/transform_utils.py to transform_utils.cpython-310.pyc
+byte-compiling /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj/main_pipeline_node.py to main_pipeline_node.cpython-310.pyc
+byte-compiling /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj/camera_node.py to camera_node.cpython-310.pyc
+byte-compiling /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj/open_manipulator_x_kinematics.py to open_manipulator_x_kinematics.cpython-310.pyc
+byte-compiling /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj/object_detection_node.py to object_detection_node.cpython-310.pyc
+byte-compiling /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj/dynamixel_utils.py to dynamixel_utils.cpython-310.pyc
+byte-compiling /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj/test.py to test.cpython-310.pyc
+byte-compiling /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj/robot_control_node.py to robot_control_node.cpython-310.pyc
+byte-compiling /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj/coordinate_publisher_node.py to coordinate_publisher_node.cpython-310.pyc
+running install_data
+copying package.xml -> /home/jjsoh/Robotvision_ws/install/vision_proj/share/vision_proj
+copying launch/vision_project.launch.py -> /home/jjsoh/Robotvision_ws/install/vision_proj/share/vision_proj/launch
+copying config/robot_config.yaml -> /home/jjsoh/Robotvision_ws/install/vision_proj/share/vision_proj/config
+copying config/camera_calib.yaml -> /home/jjsoh/Robotvision_ws/install/vision_proj/share/vision_proj/config
+copying models/yolov8n.pt -> /home/jjsoh/Robotvision_ws/install/vision_proj/share/vision_proj/models
+copying resource/vision_proj -> /home/jjsoh/Robotvision_ws/install/vision_proj/share/ament_index/resource_index/packages
+running install_egg_info
+Copying ../../build/vision_proj/vision_proj.egg-info to /home/jjsoh/Robotvision_ws/install/vision_proj/lib/python3.10/site-packages/vision_proj-0.0.1-py3.10.egg-info
+running install_scripts
+Installing camera_node script to /home/jjsoh/Robotvision_ws/install/vision_proj/lib/vision_proj
+Installing coordinate_publisher_node script to /home/jjsoh/Robotvision_ws/install/vision_proj/lib/vision_proj
+Installing main_pipeline_node script to /home/jjsoh/Robotvision_ws/install/vision_proj/lib/vision_proj
+Installing object_detection_node script to /home/jjsoh/Robotvision_ws/install/vision_proj/lib/vision_proj
+Installing robot_control_node script to /home/jjsoh/Robotvision_ws/install/vision_proj/lib/vision_proj
+writing list of installed files to '/home/jjsoh/Robotvision_ws/build/vision_proj/install.log'

@@ -1,0 +1,1 @@
+/home/jjsoh/Robotvision_ws/build/open_manipulator_description/ament_cmake_core/open_manipulator_descriptionConfig-version.cmake

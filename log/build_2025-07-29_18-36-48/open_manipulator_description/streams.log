@@ -1,0 +1,54 @@
+[0.021s] Invoking command in '/home/jjsoh/Robotvision_ws/build/open_manipulator_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jjsoh/Robotvision_ws/install/vision_proj:/opt/ros/humble /usr/bin/cmake /home/jjsoh/Robotvision_ws/src/open_manipulator_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/jjsoh/Robotvision_ws/install/open_manipulator_description
+[0.071s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.200s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.296s] -- Configuring done
+[0.303s] -- Generating done
+[0.304s] -- Build files have been written to: /home/jjsoh/Robotvision_ws/build/open_manipulator_description
+[0.309s] Invoked command in '/home/jjsoh/Robotvision_ws/build/open_manipulator_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jjsoh/Robotvision_ws/install/vision_proj:/opt/ros/humble /usr/bin/cmake /home/jjsoh/Robotvision_ws/src/open_manipulator_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/jjsoh/Robotvision_ws/install/open_manipulator_description
+[0.311s] Invoking command in '/home/jjsoh/Robotvision_ws/build/open_manipulator_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jjsoh/Robotvision_ws/install/vision_proj:/opt/ros/humble /usr/bin/cmake --build /home/jjsoh/Robotvision_ws/build/open_manipulator_description -- -j16 -l16
+[0.354s] Invoked command in '/home/jjsoh/Robotvision_ws/build/open_manipulator_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jjsoh/Robotvision_ws/install/vision_proj:/opt/ros/humble /usr/bin/cmake --build /home/jjsoh/Robotvision_ws/build/open_manipulator_description -- -j16 -l16
+[0.366s] Invoking command in '/home/jjsoh/Robotvision_ws/build/open_manipulator_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jjsoh/Robotvision_ws/install/vision_proj:/opt/ros/humble /usr/bin/cmake --install /home/jjsoh/Robotvision_ws/build/open_manipulator_description
+[0.374s] -- Install configuration: ""
+[0.375s] -- Execute custom install script
+[0.375s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/launch/omx_Rviz.launch.py
+[0.384s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/launch/omx_gazebo.launch.py
+[0.395s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/gripper_left_palm.stl
+[0.405s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/gripper_right_palm.stl
+[0.415s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/link1.stl
+[0.425s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/link2.stl
+[0.434s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/link3.stl
+[0.444s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/link4.stl
+[0.454s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/link5.stl
+[0.464s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/plate.stl
+[0.474s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/rviz/open_manipulator.rviz
+[0.484s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/urdf/omx/omx.urdf.xacro
+[0.494s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/urdf/omx/omx_arm.urdf.xacro
+[0.504s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/gazebo/empty.sdf
+[0.514s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/gazebo/omx.gazebo.xacro
+[0.525s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/ros2_control/omx.ros2_control.xacro
+[0.535s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/gazebo/empty.sdf
+[0.535s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/gazebo/omx.gazebo.xacro
+[0.535s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/gripper_left_palm.stl
+[0.535s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/gripper_right_palm.stl
+[0.535s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/link1.stl
+[0.536s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/link2.stl
+[0.536s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/link3.stl
+[0.536s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/link4.stl
+[0.536s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/link5.stl
+[0.536s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/plate.stl
+[0.536s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/ament_index/resource_index/package_run_dependencies/open_manipulator_description
+[0.547s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/ament_index/resource_index/parent_prefix_path/open_manipulator_description
+[0.558s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/environment/ament_prefix_path.sh
+[0.568s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/environment/ament_prefix_path.dsv
+[0.578s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/environment/path.sh
+[0.589s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/environment/path.dsv
+[0.599s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/local_setup.bash
+[0.609s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/local_setup.sh
+[0.620s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/local_setup.zsh
+[0.630s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/local_setup.dsv
+[0.640s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/package.dsv
+[0.650s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/ament_index/resource_index/packages/open_manipulator_description
+[0.660s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/cmake/open_manipulator_descriptionConfig.cmake
+[0.670s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/cmake/open_manipulator_descriptionConfig-version.cmake
+[0.681s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/package.xml
+[0.693s] Invoked command in '/home/jjsoh/Robotvision_ws/build/open_manipulator_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jjsoh/Robotvision_ws/install/vision_proj:/opt/ros/humble /usr/bin/cmake --install /home/jjsoh/Robotvision_ws/build/open_manipulator_description

@@ -1,0 +1,30 @@
+dynamixel_ids:
+  base: 1
+  shoulder: 2
+  elbow: 3
+  wrist: 4
+  gripper: 5
+
+link_lengths:
+  L1: 0.080    # Base to Shoulder (단위: m)
+  L2: 0.115    # Shoulder to Elbow
+  L3: 0.120    # Elbow to Wrist
+  L4: 0.050    # Wrist to End-effector
+
+joint_limits:
+  base: [-2.5, 2.5]        # 약 -143° ~ +143°
+  shoulder: [-2.5, 2.5]
+  elbow: [-2.5, 2.5]
+  wrist: [-2.5, 2.5]
+  gripper: [0.0, 1.0]      # 그리퍼는 설계에 따라 조정
+
+initial_positions:
+  base: 0.0
+  shoulder: 0.0
+  elbow: 0.0
+  wrist: 0.0
+  gripper: 0.0
+
+control_rate_hz: 20
+
+robot_base_frame: "base_link"
