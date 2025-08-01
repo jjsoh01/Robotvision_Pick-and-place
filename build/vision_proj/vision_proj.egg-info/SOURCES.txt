@@ -1,4 +1,3 @@
-LICENSE
 package.xml
 setup.cfg
 setup.py
@@ -14,9 +13,6 @@ config/robot_config.yaml
 launch/vision_project.launch.py
 models/yolov8n.pt
 resource/vision_proj
-test/test_copyright.py
-test/test_flake8.py
-test/test_pep257.py
 vision_proj/__init__.py
 vision_proj/camera_node.py
 vision_proj/coordinate_publisher_node.py
@@ -26,3 +22,10 @@ vision_proj/object_detection_node.py
 vision_proj/open_manipulator_x_kinematics.py
 vision_proj/robot_control_node.py
 vision_proj/transform_utils.py
+vision_proj.egg-info/PKG-INFO
+vision_proj.egg-info/SOURCES.txt
+vision_proj.egg-info/dependency_links.txt
+vision_proj.egg-info/entry_points.txt
+vision_proj.egg-info/requires.txt
+vision_proj.egg-info/top_level.txt
+vision_proj.egg-info/zip-safe

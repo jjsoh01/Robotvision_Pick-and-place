@@ -33,7 +33,7 @@ class MainPipelineNode(Node):
             10
         )
 
-        self.get_logger().info('MainPipelineNode ready.')
+        self.get_logger().info('MainPipeline 준비.')
 
     def on_object_detected(self, msg: PointStamped):
         """

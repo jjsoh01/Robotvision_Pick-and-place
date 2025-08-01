@@ -4,3 +4,6 @@ source;share/vision_proj/hook/pythonpath.sh
 source;share/vision_proj/hook/ament_prefix_path.ps1
 source;share/vision_proj/hook/ament_prefix_path.dsv
 source;share/vision_proj/hook/ament_prefix_path.sh
+source;../../build/vision_proj/share/vision_proj/hook/pythonpath_develop.ps1
+source;../../build/vision_proj/share/vision_proj/hook/pythonpath_develop.dsv
+source;../../build/vision_proj/share/vision_proj/hook/pythonpath_develop.sh

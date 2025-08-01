@@ -1,0 +1,51 @@
+[0.016s] Invoking command in '/home/jjsoh/Robotvision_ws/build/open_manipulator_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jjsoh/Robotvision_ws/install/vision_proj:/opt/ros/humble /usr/bin/cmake --build /home/jjsoh/Robotvision_ws/build/open_manipulator_description -- -j16 -l16
+[0.025s] gmake: Warning: File 'Makefile' has modification time 30356 s in the future
+[0.047s] gmake[1]: Warning: File 'CMakeFiles/Makefile2' has modification time 30356 s in the future
+[0.047s] gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+[0.057s] gmake: warning:  Clock skew detected.  Your build may be incomplete.
+[0.246s] Invoked command in '/home/jjsoh/Robotvision_ws/build/open_manipulator_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jjsoh/Robotvision_ws/install/vision_proj:/opt/ros/humble /usr/bin/cmake --build /home/jjsoh/Robotvision_ws/build/open_manipulator_description -- -j16 -l16
+[0.257s] Invoking command in '/home/jjsoh/Robotvision_ws/build/open_manipulator_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jjsoh/Robotvision_ws/install/vision_proj:/opt/ros/humble /usr/bin/cmake --install /home/jjsoh/Robotvision_ws/build/open_manipulator_description
+[0.265s] -- Install configuration: ""
+[0.265s] -- Execute custom install script
+[0.265s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/launch/omx_Rviz.launch.py
+[0.266s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/launch/omx_gazebo.launch.py
+[0.266s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/gripper_left_palm.stl
+[0.266s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/gripper_right_palm.stl
+[0.266s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/link1.stl
+[0.266s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/link2.stl
+[0.266s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/link3.stl
+[0.266s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/link4.stl
+[0.266s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/link5.stl
+[0.266s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/plate.stl
+[0.267s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/rviz/open_manipulator.rviz
+[0.267s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/urdf/omx/omx.urdf.xacro
+[0.267s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/urdf/omx/omx_arm.urdf.xacro
+[0.267s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/gazebo/empty.sdf
+[0.267s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/gazebo/omx.gazebo.xacro
+[0.267s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/ros2_control/omx.ros2_control.xacro
+[0.268s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/gazebo/empty.sdf
+[0.268s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/gazebo/omx.gazebo.xacro
+[0.268s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/gripper_left_palm.stl
+[0.268s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/gripper_right_palm.stl
+[0.268s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/link1.stl
+[0.268s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/link2.stl
+[0.268s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/link3.stl
+[0.268s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/link4.stl
+[0.268s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/link5.stl
+[0.269s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/meshes/omx/plate.stl
+[0.269s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/ament_index/resource_index/package_run_dependencies/open_manipulator_description
+[0.269s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/ament_index/resource_index/parent_prefix_path/open_manipulator_description
+[0.269s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/environment/ament_prefix_path.sh
+[0.269s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/environment/ament_prefix_path.dsv
+[0.269s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/environment/path.sh
+[0.269s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/environment/path.dsv
+[0.270s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/local_setup.bash
+[0.270s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/local_setup.sh
+[0.270s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/local_setup.zsh
+[0.270s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/local_setup.dsv
+[0.270s] -- Symlinking: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/package.dsv
+[0.281s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/ament_index/resource_index/packages/open_manipulator_description
+[0.281s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/cmake/open_manipulator_descriptionConfig.cmake
+[0.282s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/cmake/open_manipulator_descriptionConfig-version.cmake
+[0.282s] -- Up-to-date symlink: /home/jjsoh/Robotvision_ws/install/open_manipulator_description/share/open_manipulator_description/package.xml
+[0.285s] Invoked command in '/home/jjsoh/Robotvision_ws/build/open_manipulator_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jjsoh/Robotvision_ws/install/vision_proj:/opt/ros/humble /usr/bin/cmake --install /home/jjsoh/Robotvision_ws/build/open_manipulator_description

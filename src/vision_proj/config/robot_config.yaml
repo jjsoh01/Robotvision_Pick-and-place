@@ -14,7 +14,7 @@ link_lengths:
 joint_limits:
   base: [-2.5, 2.5]        # 약 -143° ~ +143°
   shoulder: [-2.5, 2.5]
-  elbow: [-2.5, 2.5]
+  elbow: [1.047, 4.188]
   wrist: [-2.5, 2.5]
   gripper: [0.0, 1.0]      # 그리퍼는 설계에 따라 조정
 
