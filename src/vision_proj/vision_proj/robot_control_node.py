@@ -18,15 +18,10 @@ class RobotControlNode(Node):
     def __init__(self):
         super().__init__('robot_control_node')
 
-        # --- parameters ---
-        self.declare_parameter('serial_port', '/dev/ttyACM0')
-        self.declare_parameter('robot_config_file', '')
-        
-        # self.declare_parameter('simulation', True)  # 시뮬레이션 여부
         self.simulation_mode = True
+        # serial_port = 
 
-        serial_port = self.get_parameter('serial_port').get_parameter_value().string_value
-        robot_config_file = self.get_parameter('robot_config_file').get_parameter_value().string_value
+        robot_config_file = "/home/jjsoh/Robotvision_ws/src/vision_proj/config/robot_config.yaml"
 
         # --- 시리얼 연결 (실제 로봇인 경우만)
         self.ser = None

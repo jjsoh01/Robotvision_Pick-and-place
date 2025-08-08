@@ -55,12 +55,9 @@ class ObjectDetectionNode(Node):
         try:
             cv2.imshow("YOLO Detection", annotated_frame)
             key = cv2.waitKey(1)
-            # (ESC로 끄고 싶으면 아래 주석 해제)
-            # if key == 27:
-            #     self.get_logger().info("ESC pressed. Just returning.")
-            #     return
+
         except Exception as e:
-            self.get_logger().warn(f"[DEBUG] cv2.imshow failed: {e}")
+            self.get_logger().warn(f"CV2.imshow failed: {e}")
 
         # Pick 대상 한 개만 publish (없으면 아무것도 안 보냄)
         if detected_objs:

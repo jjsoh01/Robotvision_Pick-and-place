@@ -1,5 +1,3 @@
-# vision_proj/vision_proj/camera_node.py
-
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Image, CameraInfo
@@ -18,8 +16,6 @@ class CameraPublisher(Node):
         self.depth_publisher = self.create_publisher(Image, 'camera/depth/image_raw', 10)
         self.camera_info_publisher = self.create_publisher(CameraInfo, 'camera/color/camera_info', 10)
 
-        self.get_logger().info('Initializing RealSense camera...')
-
         # RealSense 파이프라인 설정
         self.pipeline = rs.pipeline()
         self.config = rs.config()
@@ -31,7 +27,7 @@ class CameraPublisher(Node):
         # 파이프라인 시작
         try:
             profile = self.pipeline.start(self.config)
-            self.get_logger().info('RealSense camera started.')
+            self.get_logger().info('RealSense 인식!')
 
             # 카메라 내부 파라미터 가져오기 (컬러 스트림 기준)
             intrinsics = profile.get_stream(rs.stream.color).as_video_stream_profile().get_intrinsics()
@@ -101,7 +97,7 @@ class CameraPublisher(Node):
             self.get_logger().error(f"Error in camera callback: {e}")
 
     def destroy_node(self):
-        self.get_logger().info('Stopping RealSense pipeline...')
+        self.get_logger().info('RealSense pipeline 정지.')
         self.pipeline.stop()
         super().destroy_node()
 

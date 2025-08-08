@@ -10,7 +10,7 @@ class MainPipelineNode(Node):
         # 상태 플래그
         self.busy = False
 
-        # 3D 물체 위치 감지 토픽 구독
+        # 3D 물체 위치 Subscribe(Raw)
         self.create_subscription(
             PointStamped,
             'object/position3d_robot_frame_raw',
@@ -18,7 +18,7 @@ class MainPipelineNode(Node):
             10
         )
 
-        # robot_control_node에 좌표 보내기
+        # robot_control_node에 좌표 Publish
         self.target_pub = self.create_publisher(
             PointStamped,
             'object/position3d_robot_frame',
@@ -32,8 +32,6 @@ class MainPipelineNode(Node):
             self.on_place_done,
             10
         )
-
-        self.get_logger().info('MainPipeline 준비.')
 
     def on_object_detected(self, msg: PointStamped):
         """

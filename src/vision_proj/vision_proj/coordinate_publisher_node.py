@@ -5,41 +5,67 @@ from geometry_msgs.msg import Point, PointStamped
 from cv_bridge import CvBridge
 
 import numpy as np
-from scipy.spatial.transform import Rotation as R
+from transforms3d.quaternions import mat2quat
+import transforms3d.euler
+import transforms3d.quaternions
 
 import message_filters
-from vision_proj.transform_utils import get_3d_point_from_depth, load_camera_robot_transform
+from vision_proj.transform_utils import get_3d_point_from_depth
 import os
 
-def make_transform_matrix(roll, pitch, yaw, tx, ty, tz, degrees=True):
+def transform_coord(cam_point, roll, pitch, yaw, tx, ty, tz):
+    # 각도 라디안으로
+    roll = np.deg2rad(roll)
+    pitch = np.deg2rad(pitch)
+    yaw = np.deg2rad(yaw)
+
+    # 축 변환
+    # 카메라(x(오른쪽), y(아래), z(전방)) 
+    # → 로봇(+x(전방), y(왼), z(위)) 변환
+    # 로봇 x = 카메라 z
+    # 로봇 y = -카메라 x
+    # 로봇 z = -카메라 y
     P = np.array([
         [0, 0, 1],
         [-1, 0, 0],
         [0, -1, 0],
     ])
 
-    # 카메라(x, y, z) → 로봇(+x, -y, -z) 매핑
-    # 로봇 x = 카메라 z
-    # 로봇 y = -카메라 x
-    # 로봇 z = -카메라 y
+    p_robot_aligned = P @ cam_point
 
-    rot = R.from_euler('zyx', [yaw, pitch, roll], degrees=degrees)
-    R_mat = rot.as_matrix()
-    # 최종 회전행렬 = R * P
-    # roll, pitch, yaw 는 축 변환 후 들어갔으므로 로봇 축 기준으로 값 넣기.
-    # tx, ty, tz 는 카메라 축 기준으로 로봇 축이 어디에 있는지.
-    RP = R_mat @ P
-    T = np.eye(4)
-    T[:3, :3] = RP
-    T[:3, 3] = [tx, ty, tz]
-    return T
+    # 쿼터니언 회전 생성 (sxyz: x→y→z intrinsic, roll, pitch, yaw 순서.)
+    q = transforms3d.euler.euler2quat(roll, pitch, yaw, axes='rxyz')
+    # q = transforms3d.euler.euler2quat(yaw, pitch, roll, axes='rzyx')
+
+    # 벡터를 쿼터니언으로 (0, x, y, z)
+    v_q = np.concatenate([[0], p_robot_aligned])
+    q_conj = transforms3d.quaternions.qconjugate(q)
+
+    # 회전 적용: q * v * q_conj
+    v_rot = transforms3d.quaternions.qmult(transforms3d.quaternions.qmult(q, v_q), q_conj)[1:]
+
+    # 4. 평행이동 적용
+    translation = (tx, ty, tz)
+    v_final = v_rot + np.array(translation)
+
+    return v_final
 
 class CoordinatePublisherNode(Node):
+    def test_manual_camera_point(self, x, y, z):
+        # 동차좌표 벡터 생성
+        point_homogeneous = np.array([x, y, z])
+        # 변환 적용
+        robot_point_homogeneous = transform_coord(point_homogeneous, 0, -45, 45, -0.3, 0.3, 0.56)
+        robot_x = robot_point_homogeneous[0]
+        robot_y = robot_point_homogeneous[1]
+        robot_z = robot_point_homogeneous[2]
+        print(f"카메라 좌표: ({x}, {y}, {z}) → 로봇 좌표: ({robot_x}, {robot_y}, {robot_z})")
+        return robot_x, robot_y, robot_z
+
     def __init__(self):
         super().__init__('coordinate_publisher_node')
         self.bridge = CvBridge()
         self.camera_info = None
-        self.transform_camera_to_robot = make_transform_matrix(0.0, 50, -40, 0.3, -0.58, 0.1 )
 
         # MessageFilter로 depth, camera_info, object 픽셀 동기화
         self.depth_sub = message_filters.Subscriber(self, Image, 'camera/depth/image_raw')
@@ -76,8 +102,8 @@ class CoordinatePublisherNode(Node):
         self.get_logger().info(f"카메라 좌표 : x={camera_point_3d[0]:.3f}, y={camera_point_3d[1]:.3f}, z={camera_point_3d[2]:.3f}"
 )
 
-        point_homogeneous = np.array([camera_point_3d[0], camera_point_3d[1], camera_point_3d[2], 1.0])
-        robot_point_homogeneous = np.dot(self.transform_camera_to_robot, point_homogeneous)
+        point_homogeneous = np.array([camera_point_3d[0], camera_point_3d[1], camera_point_3d[2]])
+        robot_point_homogeneous = transform_coord(point_homogeneous, 0, -45, 45, -0.3, 0.3, 0.56)
         robot_x = robot_point_homogeneous[0]
         robot_y = robot_point_homogeneous[1]
         robot_z = robot_point_homogeneous[2]
@@ -97,6 +123,16 @@ class CoordinatePublisherNode(Node):
 def main(args=None):
     rclpy.init(args=args)
     node = CoordinatePublisherNode()
+
+    # ==== 테스트용 직접 좌표 입력 ====
+    # 예: 카메라 기준 (0.1, 0.1, 0.3)
+    # 여러 값도 시도해볼 수 있음
+    node.test_manual_camera_point(0.0, 0.0, 1.0)
+    node.test_manual_camera_point(1.0, 0.0, 0.0)
+    node.test_manual_camera_point(0.0, 1.0, 0.0)
+    node.test_manual_camera_point(0.0115, 0.0120, 0.65)
+    # ===============================
+
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()

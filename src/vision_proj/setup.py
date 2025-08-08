@@ -32,6 +32,7 @@ setup(
             'coordinate_publisher_node = vision_proj.coordinate_publisher_node:main',
             'robot_control_node = vision_proj.robot_control_node:main',
             'main_pipeline_node = vision_proj.main_pipeline_node:main',
+            'Test_transform = vision_proj.Test_transform:main',
         ],
     },
 )
