@@ -33,6 +33,8 @@ def transform_coord(cam_point, roll, pitch, yaw, tx, ty, tz):
 
     p_robot_aligned = P @ cam_point
 
+    print(f"축 변환 : x={p_robot_aligned[0]:.3f}, y={p_robot_aligned[1]:.3f}, z={p_robot_aligned[2]:.3f}")
+
     # 쿼터니언 회전 생성 (sxyz: x→y→z intrinsic, roll, pitch, yaw 순서.)
     q = transforms3d.euler.euler2quat(roll, pitch, yaw, axes='rxyz')
     # q = transforms3d.euler.euler2quat(yaw, pitch, roll, axes='rzyx')
@@ -44,6 +46,8 @@ def transform_coord(cam_point, roll, pitch, yaw, tx, ty, tz):
     # 회전 적용: q * v * q_conj
     v_rot = transforms3d.quaternions.qmult(transforms3d.quaternions.qmult(q, v_q), q_conj)[1:]
 
+    print(f"회전 : x={v_rot[0]:.3f}, y={v_rot[1]:.3f}, z={v_rot[2]:.3f}")
+
     # 4. 평행이동 적용
     translation = (tx, ty, tz)
     v_final = v_rot + np.array(translation)
@@ -51,17 +55,6 @@ def transform_coord(cam_point, roll, pitch, yaw, tx, ty, tz):
     return v_final
 
 class CoordinatePublisherNode(Node):
-    def test_manual_camera_point(self, x, y, z):
-        # 동차좌표 벡터 생성
-        point_homogeneous = np.array([x, y, z])
-        # 변환 적용
-        robot_point_homogeneous = transform_coord(point_homogeneous, 0, -45, 45, -0.3, 0.3, 0.56)
-        robot_x = robot_point_homogeneous[0]
-        robot_y = robot_point_homogeneous[1]
-        robot_z = robot_point_homogeneous[2]
-        print(f"카메라 좌표: ({x}, {y}, {z}) → 로봇 좌표: ({robot_x}, {robot_y}, {robot_z})")
-        return robot_x, robot_y, robot_z
-
     def __init__(self):
         super().__init__('coordinate_publisher_node')
         self.bridge = CvBridge()
@@ -103,7 +96,7 @@ class CoordinatePublisherNode(Node):
 )
 
         point_homogeneous = np.array([camera_point_3d[0], camera_point_3d[1], camera_point_3d[2]])
-        robot_point_homogeneous = transform_coord(point_homogeneous, 0, -45, 45, -0.3, 0.3, 0.56)
+        robot_point_homogeneous = transform_coord(point_homogeneous, 0, 0, 0, -0.25, 0.0, 0.27)
         robot_x = robot_point_homogeneous[0]
         robot_y = robot_point_homogeneous[1]
         robot_z = robot_point_homogeneous[2]
@@ -123,16 +116,6 @@ class CoordinatePublisherNode(Node):
 def main(args=None):
     rclpy.init(args=args)
     node = CoordinatePublisherNode()
-
-    # ==== 테스트용 직접 좌표 입력 ====
-    # 예: 카메라 기준 (0.1, 0.1, 0.3)
-    # 여러 값도 시도해볼 수 있음
-    node.test_manual_camera_point(0.0, 0.0, 1.0)
-    node.test_manual_camera_point(1.0, 0.0, 0.0)
-    node.test_manual_camera_point(0.0, 1.0, 0.0)
-    node.test_manual_camera_point(0.0115, 0.0120, 0.65)
-    # ===============================
-
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()
